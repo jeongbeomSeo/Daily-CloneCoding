@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Menu Navigation</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="desc">
+      <h1>Menu Navigation With Cool Hover</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum nam,
+        omnis velit debitis id iure sapiente, ullam laudantium maiores, eligendi
+        sint. Inventore, dolorum! At eligendi vel corporis minus nulla
+        repellendus.
+      </p>
+    </div>
+
+    <a href="#" class="btnm">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+
+    <div class="menu">
+      <a href="#" class="ion-document"></a>
+      <a href="#" class="ion-trash-a"></a>
+      <a href="#" class="l1 ion-folder"></a>
+      <a href="#" class="l2 ion-calendar"></a>
+      <a href="#" class="ion-locked"></a>
+      <a href="#" class="ion-chatbox-working"></a>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript">
+      $(".btnm").on("click", function () {
+        $(".btnm").toggleClass("btnn");
+        $(".menu").toggleClass("show");
+      });
+    </script>
+  </body>
+</html>
