@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Body Background Color</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <a class="color-btn" id="red">#e74c3c</a>
+      <a class="color-btn" id="blue">#3498db</a>
+      <a class="color-btn" id="green">#2ecc71</a>
+      <a class="color-btn" id="gray">#34495e</a>
+      <a class="color-btn" id="yellow">#f1c40f</a>
+      <a class="color-btn" id="orange">#e67e22</a>
+    </div>
+
+    <script>
+      function colorChange() {
+        document.body.style.background = this.innerHTML;
+        // 매개변수를 안받으므로 this를 활용하였다.
+      }
+
+      const btns = document.querySelectorAll(".color-btn");
+      // querySelectorAll로 불러들인 상태에선 addEventListener같은 함수를 사용할 수 없다.
+      // NodeList라고 뜨는데 이 상태가 아닌 각각 Node를 선택해야 Event를 적용시킬 수 있는듯 하다.
+      // 그래서 사용하는 것이 forEach
+      btns.forEach(function (btn) {
+        btn.addEventListener("click", colorChange);
+        //btn.addEventListener("click", colorChange(btn));
+        //위와 같이 할 시에는 colorChage가 다 실행되서 원하는 방식처럼 찬되고 orange배경이 입혀져있고 click해도 배경에 변화가 없다.
+      });
+    </script>
+  </body>
+</html>
