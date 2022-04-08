@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Custom Search Filter</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="searchbox">
+      <div class="header">
+        <h1>Contacts</h1>
+        <input
+          onkeyup="filter()"
+          type="text"
+          placeholder="Tpye to Search"
+          id="value"
+        />
+      </div>
+
+      <div class="container">
+        <div class="profile">
+          <span class="icon">A</span>
+          <span class="name">Archie Hansen</span>
+        </div>
+
+        <div class="profile">
+          <span class="icon">C</span>
+          <span class="name">Celia Wood</span>
+        </div>
+
+        <div class="profile">
+          <span class="icon">D</span>
+          <span class="name">Danilelle Spencer</span>
+        </div>
+
+        <div class="profile">
+          <span class="icon">M</span>
+          <span class="name">Margarita Austin</span>
+        </div>
+
+        <div class="profile">
+          <span class="icon">S</span>
+          <span class="name">Simon Daniels</span>
+        </div>
+
+        <div class="profile">
+          <span class="icon">G</span>
+          <span class="name">Glenn Stevenson</span>
+        </div>
+
+        <div class="profile">
+          <span class="icon">C</span>
+          <span class="name">Collen black</span>
+        </div>
+
+        <div class="profile">
+          <span class="icon">M</span>
+          <span class="name">Miriam Johnston</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function filter() {
+        const value = document.getElementById("value").value.toUpperCase();
+        const profile = document.getElementsByClassName("profile");
+
+        for (let i = 0; i < profile.length; i++) {
+          const name = profile[i].getElementsByClassName("name");
+          //getElementsByClassName 는 컬렉션 객체를 반환하므로 name으로 쓰는것이 아닌 name[0]으로 사용한것.
+          if (name[0].innerHTML.toUpperCase().indexOf(value) > -1) {
+            profile[i].style.display = "flex";
+          } else {
+            profile[i].style.display = "none";
+          }
+          //위와 같이 함으로써 class이름이 같은 여러 개의 container에 다른 CSS를 적용시켰다.
+        }
+      }
+    </script>
+  </body>
+</html>
