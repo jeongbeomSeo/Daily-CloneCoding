@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Services Section</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css
+      "
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <sction class="services-section">
+      <div class="inner-width">
+        <h1>Our <strong>Services</strong></h1>
+        <div class="services owl-carousel">
+          <div class="service">
+            <div class="service-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="service-name">Design</div>
+            <div class="service-desc">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo
+              expedita, atque tempore unde exercitationem error fugiat
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="service-icon">
+              <i class="fas fa-pencil-alt"></i>
+            </div>
+            <div class="service-name">Edit Texts</div>
+            <div class="service-desc">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo
+              expedita, atque tempore unde exercitationem error fugiat
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="service-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="service-name">Build Websites</div>
+            <div class="service-desc">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo
+              expedita, atque tempore unde exercitationem error fugiat
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="service-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <div class="service-name">Mange Databases</div>
+            <div class="service-desc">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo
+              expedita, atque tempore unde exercitationem error fugiat
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="service-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <div class="service-name">Support</div>
+            <div class="service-desc">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo
+              expedita, atque tempore unde exercitationem error fugiat
+            </div>
+          </div>
+        </div>
+      </div>
+    </sction>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(".services").owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            itmes: 3,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
